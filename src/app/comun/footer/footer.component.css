@@ -1,0 +1,75 @@
+.footer--grid_container {
+    height: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #414345, #232526);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #414345, #232526);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.footer--grid_container div {
+    font-size: 2 rem;
+}
+
+.footer--grid_container div a {
+    text-decoration: none;
+}
+
+.datos {
+    margin-left: 2rem;
+}
+
+.datos p {
+    font-weight: bold;
+    color: rgb(145, 133, 133);
+}
+
+.datos a {
+    color: rgb(145, 133, 133);
+}
+
+.social {
+    text-align: center;
+}
+
+.social p {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 50px;
+    color: rgb(145, 133, 133);
+    font-weight: bold;
+}
+
+.social a {
+    margin-right: 1rem;
+}
+
+.sello {
+    text-align: right;
+    margin-right: 2rem;
+    margin-top: 0.2rem;
+}
+
+@media only screen and (max-width: 390px) {
+    .footer--grid_container {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .footer--grid_container div {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .social p {
+        margin-right: 0px;
+    }
+    .sello {
+        margin: 0
+    }
+    .sello img {
+        min-width: 390px;
+        height: 390pxx;
+    }
+}

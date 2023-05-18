@@ -1,0 +1,103 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+
+    <div class="form">
+        <section>
+
+            <h1>Alta de Productos</h1>
+
+            <form [formGroup]="miFormulario" (submit)="send()" autocomplete="off">
+                <!-- Tipo-producto input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Tipo Producto</label>
+                    <select formControlName="tipoProducto" class="form-select" aria-label="Disabled select example" (change)="familia()">
+                        
+                        <option value="" >...Selecione tipo producto</option>
+                        <option  *ngFor="let tipo of productoTipo.getTipo()" value={{tipo}}>{{tipo}} </option>    
+                        
+                        
+                    </select>
+                </div>
+                <span class="error" *ngIf="!miFormulario.controls['tipoProducto'].pristine  && miFormulario.controls['tipoProducto'].invalid">Debe indicar un tipo de Producto</span>
+
+                <!-- Familia-producto input -->
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Familia</label>
+
+                    <select formControlName="familia" class="form-select" aria-label="Disabled select example" (change)="subfamilia()">
+                        <option *ngFor="let data of familiaTipo" value={{data}} >{{data}} </option>    
+                    </select>
+                </div>
+
+
+
+
+
+                <!-- Subamilia-producto input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Subfamilia</label>
+                    <select formControlName="subfamilia" class="form-select" aria-label="Disabled select example">
+                        <option *ngFor="let data of subfamiliaTipo" value={{data}}>{{data}} </option>   
+                        
+                    </select>
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Codigo de barras</label>
+                    <input formControlName="codigoBarras" type="text" id="form2Example1" class="form-control" />
+
+                </div>
+
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Nombre producto</label>
+                    <input formControlName="nombreProducto" type="text" id="form2Example2" class="form-control" />
+
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">precio compra</label>
+                    <input formControlName="precioCompra" type="number" id="precioCopmpra" class="form-control" (change)="ivaCompra()" />
+
+
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">IVA compra</label>
+                    <input value={{ivaDeCompra}} type="number" id="form2Example4" class="form-control" />
+
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Precio Venta</label>
+                    <input formControlName="precioVenta" value='' type="number" id="form2Example5" class="form-control " (change)="ivaVenta()" />
+
+                </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Precio venta con IVA</label>
+                    <input value={{ventaConIva}} type="number" id="form2Example6" class="form-control" />
+
+                </div>
+
+
+                <!-- Submit button -->
+                <div class="insertar">
+
+                    <button type=" submit " class="btn btn-primary btn-block mb-4 ">Insertar</button>
+                </div>
+
+                <!-- Register buttons -->
+                <div class="text-center ">
+
+                    <div class="text-center ">
+                        <i class="fa-sharp fa-solid fa-house fa-2x " routerLink="/home " routerLink="/"></i>
+                    </div>
+
+
+                </div>
+            </form>
+
+        </section>
+
+    </div>
+
+</div>
+<app-footer></app-footer>

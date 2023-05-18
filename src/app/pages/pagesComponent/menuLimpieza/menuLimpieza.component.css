@@ -1,0 +1,24 @@
+li {
+    text-align: justify;
+    list-style: none;
+    cursor: pointer
+}
+
+li:hover {
+    color: rgb(144, 140, 140);
+    ;
+}
+
+.accordion-body div p {
+    text-align: justify;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.accordion-body div p:hover {
+    color: antiquewhite;
+}
+
+.accordion-body div:hover {
+    background-color: rgb(144, 140, 140);
+}

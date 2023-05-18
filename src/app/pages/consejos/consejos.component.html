@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="contenedor">
+
+    <section>
+
+        <div id="videos" class="videos">
+            <div *ngFor="let item of datos">
+                <video src='../../../assets/video/{{item.name}}' controls="true" poster='../../../assets/video/videoCover/{{item.caratula}}'>
+            </video>
+                <p>{{item.texto}}</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+<app-footer></app-footer>

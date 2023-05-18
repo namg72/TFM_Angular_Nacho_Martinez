@@ -1,0 +1,50 @@
+<header>
+    <div class="logo">
+        <img src="../../../assets/icons/logo.png" alt="Logo">
+    </div>
+
+    <div class="nombre">
+        <h2>DG Suministros</h2>
+    </div>
+
+    <div class="cesta" *ngIf="usuario">
+        <a class="fa-solid fa-cart-arrow-down fa-2x" style="color: #7a7a7a;" routerLink="/cesta/cestaCompra"></a>
+        <p *ngIf="cartService.totalProductos>0"><span>{{cartService.totalProductos}} </span>Articulos en tu cesta</p>
+
+    </div>
+</header>
+
+
+<nav class="navbar navbar-expand-md bg-dark  navbarcustom" data-bs-theme="dark">
+
+    <div class="container-fluid">
+
+        <!-- boton menu -->
+        <button class="navbar-toggler btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <!-- elementos del munu colapsable -->
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link " routerLink="/pages/home">Home</a></li>
+                <li class="nav-item"><a class="nav-link " routerLink="/pages/nosotros">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link " routerLink="/pages/consejos">Consejos</a></li>
+                <li class="nav-item"><a class="nav-link " routerLink="/pages/contacto">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link " routerLink="/pages/tienda">Tienda</a></li>
+                <li *ngIf="admin"><a routerLink="/pages/insert">AltaProductos</a></li>
+            </ul>
+
+            <div class="loginIcon">
+
+
+                <i class="fa-sharp fa-solid fa-user fa-2x" *ngIf="!usuario"></i>
+                <i title="cerrarSesion" class="fa-solid fa-person-walking-arrow-right fa-2x iconUser" *ngIf="usuario" (click)="cerrarSesion()" alt="Cerrar Sesión"></i>
+
+                <p class="sesion" (click)="irLogin()">{{authService.nombreSesion}}</p>
+            </div>
+
+        </div>
+
+    </div>
+</nav>

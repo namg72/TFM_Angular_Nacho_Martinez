@@ -1,0 +1,127 @@
+   .formulario {
+       width: 90%;
+       background-color: #F2F3F4;
+       margin: 100px;
+       padding: 5%;
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+   }
+   
+   form {
+       width: 100%;
+       display: inline-block;
+   }
+   
+   form label {
+       display: block;
+       font-style: italic;
+       font-size: 10pt;
+       margin-top: 20px;
+   }
+   
+   form textarea {
+       height: 15rem;
+       width: 100%;
+       padding: 2%;
+       overflow: hidden;
+       resize: none;
+   }
+   
+   form input {
+       width: 300px;
+       height: 20px;
+   }
+   
+   form button {
+       width: 100px;
+       height: 30px;
+       font-size: 20px;
+       border-radius: 2px;
+   }
+   
+   .legal {
+       text-align: justify;
+   }
+   
+   .form-ivalido {
+       color: red;
+   }
+   
+   .aceptarForm {
+       color: red;
+       font-weight: bold;
+       margin-bottom: 5px;
+   }
+   
+   #checkForm {
+       float: left;
+       width: 13px;
+       margin-right: 5px;
+   }
+   
+   aside {
+       font-style: italic;
+       font-size: small;
+       margin-bottom: 20px;
+   }
+   
+   .mapas {
+       width: 100%;
+       height: 40%;
+       margin-left: 2rem;
+   }
+   
+   .mapas iframe {
+       object-fit: cover;
+       width: 100%;
+       height: 100%;
+   }
+   
+   input {
+       font-size: 14px;
+   }
+   
+   button {
+       text-align: center;
+       background-color: rgb(226, 213, 213);
+       color: antiquewhite;
+   }
+   
+   .aceptada {
+       background-color: rgb(103, 98, 98);
+       ;
+   }
+   
+   @media only screen and (max-width: 820px) {
+       .formulario {
+           min-width: 820px;
+           grid-template-columns: 1fr;
+           margin: 0%;
+           row-gap: 4rem;
+       }
+       .formulario div {
+           padding: 3rem;
+       }
+       .mapas {
+           max-width: 820px;
+           margin-left: 0%;
+           min-height: 400px;
+       }
+   }
+   
+   @media only screen and (max-width: 390px) {
+       .formulario {
+           width: 100%;
+           grid-template-columns: 1fr;
+           margin-left: 0%;
+       }
+       .formulario div {
+           max-width: 390px;
+           padding: 5%;
+       }
+       .mapas {
+           max-width: 390px;
+           margin-left: 0%;
+           min-height: 390px;
+       }
+   }

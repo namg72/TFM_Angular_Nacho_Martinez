@@ -1,0 +1,40 @@
+.container {
+    width: 40%;
+    margin-top: 100px;
+}
+
+.error {
+    background-color: rgb(232, 174, 174);
+    border-radius: 10px;
+    color: red;
+    text-align: center;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.valid {
+    background-color: rgb(118, 247, 96);
+    border-radius: 10px;
+    color: red;
+    text-align: center;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.text-center {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+
+/* .container-login100 {
+    background-image: url('../../../../assets/img/galeryImg1.jpg');
+} */
+
+.container-login100 {
+    background-image: url("src/assets/img/galeryImg1.jpg");
+}

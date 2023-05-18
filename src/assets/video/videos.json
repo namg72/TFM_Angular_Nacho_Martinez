@@ -1,0 +1,14 @@
+[
+    { "id": "01", "name": "vd_01.mp4", "caratula": "poster_01.png", "texto": "Pintura sobre plásticos" },
+    { "id": "02", "name": "vd_02.mp4", "caratula": "poster_02.png", "texto": "Renovar muebles viejos" },
+    { "id": "03", "name": "vd_03.mp4", "caratula": "poster_03.png", "texto": "Eliminar manchas pared" },
+    { "id": "04", "name": "vd_04.mp4", "caratula": "poster_04.png", "texto": "Pintura a la tiza" },
+    { "id": "05", "name": "vd_05.mp4", "caratula": "poster_05.png", "texto": "Humedad por condensación" },
+    { "id": "06", "name": "vd_06.mp4", "caratula": "poster_06.png", "texto": "Pintura sobre plásticos II" },
+    { "id": "07", "name": "vd_07.mp4", "caratula": "poster_07.png", "texto": "Reparar humedades techo" },
+    { "id": "08", "name": "vd_08.mp4", "caratula": "poster_08.png", "texto": "Preparación de paredes" },
+    { "id": "09", "name": "vd_09.mp4", "caratula": "poster_08.png", "texto": "Eliminar manchas de sangre" },
+    { "id": "10", "name": "vd_10.mp4", "caratula": "poster_10.png", "texto": "Sistema dosficación lavado automático" },
+    { "id": "11", "name": "vd_11.mp4", "caratula": "poster_11.png", "texto": "Dispack concentrado" },
+    { "id": "12", "name": "vd_12.mp4", "caratula": "poster_12.png", "texto": "Desengrasante Vorax D16 Uso General" }
+]

@@ -1,0 +1,133 @@
+<app-navbar></app-navbar>
+
+
+
+<div class="contenedor">
+
+    <div class="row">
+        <div class="menu col">
+
+            <!-- SELECTOR DE TIPOS DE PRODUCTOS -->
+            <section>
+
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                 Productos
+                                </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+
+
+                                <p *ngFor="let tipo of productosTipo.getTipo()" (click)="tipoSeleccionado(tipo)">
+
+                                    {{tipo}}
+
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+ 
+                <!-- Cargamos las paginas segun el tipo seleccionado -->
+                <hr>
+                <article>
+                    
+                    <div *ngIf="menuPintura">
+                        <app-menuPintura (onShow)="show($event)"></app-menuPintura>
+                        
+                    </div>
+                </article>
+                <article>
+                    
+                    <div *ngIf="menuLimpieza">
+                        <app-menuLimpieza (onShow)="show($event)"></app-menuLimpieza>
+                        
+                    </div>
+                </article>
+                <article>
+                    
+                    <div *ngIf="menuLavanderia">
+                        <app-menuLavanderia (onShow)="show($event)"></app-menuLavanderia>
+                        
+                    </div>
+                </article>
+                
+            </section>
+        </div>
+
+        <!--Buscamos productos introducinendo su nombre -->
+
+        <div class="productos col-8">
+
+
+            <div class="buscar">
+                <div>
+                    <i class="fa-sharp fa-solid fa-magnifying-glass fa-xl" (click)="search()"></i>
+                </div>
+
+                <div>
+                    <input [(ngModel)]="searchProduct" type="text" (input)="search()" class="form-control" placeholder=" Buscar">
+                </div>
+
+                <!-- Selector de ordenación de los productos -->
+                <div class="orderList" *ngIf="productos.length>0">
+                    <label for="">Ordenar por:</label>
+                    <select [(ngModel)]="orderSelected" (change)="orderProducts(orderSelected)">
+                        <option value="0">Nombre</option>
+                        <option value="1">Precio Ascendente</option>
+                        <option value="2">Precio descendente</option>
+                     </select>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- Listamos los productos seleccionados por pantalla> -->
+
+            <h3 *ngIf="productos.length>0">{{productos[0].subfamilia | titlecase}}</h3>
+
+            <hr>
+
+            <div class="tarjetas col-7" *ngIf="productos.length>0">
+
+                <div id="tarjetaPintura" *ngFor="let producto of productos; index as i">
+                    <img src="../../../assets/img/productos/{{producto.idProducto}}.png" class="card-img-top w-50 cardsImg" alt="Pintura" title="Pinturas">
+
+                    <div>
+                        <p>{{producto.nombreProducto}}</p>
+
+                        <p> P.V.P. <span>{{producto.precioVenta}} €</span></p>
+                        <a class="fa-solid fa-cart-arrow-down fa-3x" style="color: #7a7a7a;" (click)="addCart(producto)"></a>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="error" *ngIf="productos.length==0 && noFound">
+                <p> {{msgNoFound}}</p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+</div>
+<app-footer></app-footer>

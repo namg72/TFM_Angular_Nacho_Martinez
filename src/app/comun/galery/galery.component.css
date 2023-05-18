@@ -1,0 +1,21 @@
+        .fotoPortada {
+            display: block;
+            width: 100%;
+            height: 20%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .galery {
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .galery img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: all;
+            transition-duration: 3;
+        }

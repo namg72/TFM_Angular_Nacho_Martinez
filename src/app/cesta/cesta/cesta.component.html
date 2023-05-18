@@ -1,0 +1,175 @@
+<app-navbar>
+</app-navbar>
+
+
+<div class='vacia' *ngIf="vacia">
+
+    <!-- Si la cesta está vacia -->
+    <div>
+        <h1>SU CESTA DE LA COMPRA ESTÁ VACÍA</h1>
+        <h6>No hay ningún producto en su cesta. Empiece a comprar en DG Suministros.</h6>
+        <div>
+            <button type="button" class="btn btn-dark" routerLink="/pages/tienda">SEGUIR COMPRANDO</button>
+        </div>
+    </div>
+</div>
+
+<!-- Listado de productos -->
+<div class="contenedor" *ngIf="!vacia">
+    <hr>
+    <h3>MI CESTA</h3>
+
+    <div class="titulo">
+        <div>
+
+            <h6>Producto</h6>
+        </div>
+        <div>
+            <h6>Precio</h6>
+
+        </div>
+        <div>
+            <h6>Unidades</h6>
+
+        </div>
+        <div>
+            <span><h6>Eliminar</h6></span>
+
+        </div>
+        <div>
+
+            <span><h6>Total</h6></span>
+        </div>
+
+    </div>
+    <hr>
+    <div class="listado" *ngFor="let producto of productosCesta; let i as index">
+
+        <div>
+            <img src="../../../assets/img/productos/{{producto.idProducto}}.png">
+        </div>
+        <div class="nombreProducto">
+            {{producto.nombreProducto}}
+
+        </div>
+        <div>
+            {{producto.precioVenta}}
+        </div>
+        <div>
+            <i class="fa-solid fa-square-minus fa-3xs" style="color: #c0c3c8;" (click)="restar(producto, i)"></i>
+            <span>
+        {{producto.cantidad}}
+      </span>
+            <i class="fa-solid fa-square-plus fa-3xs" style="color: #c0c3c8;" (click)="sumar(producto)"></i>
+        </div>
+        <div class="eliminar">
+            <i class="fa-solid fa-trash fa-lg" (click)="eliminar(producto.idProducto, producto.cantidad!)"></i>
+        </div>
+        <div class="productoTotal">
+            {{producto.Total | number : '1.2-2'}}
+        </div>
+
+
+    </div>
+
+    <div class="separador"></div>
+
+    <div class="endCart">
+
+        <div>
+            <div class="icono">
+
+                <i class="fa-sharp fa-solid fa-gift fa-2xl" style="color: #575b60;"></i>
+            </div>
+
+            <div class="envio">
+                Envio gratis compras de más de 100 €
+            </div>
+        </div>
+        <div>
+            <div class="icono">
+
+                <i class="fa-solid fa-truck-fast fa-2xl" style="color:#575b60;"></i>
+            </div>
+
+            <div class="envio">
+                Entrega de 2 a 5 días laborables
+            </div>
+        </div>
+        <div class="totalCompra">
+
+            <ul>
+                <li>
+                    <h5> Productos:</h5>
+                    <div>{{sumaNeto | number : '1.2-2' }}<span>€</span></div>
+                </li>
+                <li *ngIf="!SinGastos">
+                    <h5> Gastos Envio:</h5>
+                    <div>{{gastosEnvio | number : '1.2-2'}}<span>€</span></div>
+                </li>
+                <li>
+                    <h5>Total neto:</h5>
+                    <div>{{totalNeto | number : '1.2-2'}}<span>€</span></div>
+                </li>
+                <li>
+                    <h5> IVA:</h5>
+                    <div>{{iva | number : '1.2-2'}}<span>€</span></div>
+                </li>
+                <li>
+                    <hr>
+                    <h5> Total Compra:</h5>
+                    <div>{{totalCompra | number : '1.2-2'}}<span>€</span></div>
+                </li>
+            </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--  <ul>
+                <li>
+                    <p>
+
+                        Productos:
+                    </p>
+                    <p>
+                        {{sumaNeto}}
+
+                    </p>
+
+                </li>
+
+
+                <li *ngIf="!SinGastos">Gastos de Envio: <span>{{gastosEnvio}}</span></li>
+                <li class="li">
+                    <p>
+
+                        Total neto:
+                    </p>
+                    <div>
+                        {{totalNeto}}
+                    </div>
+
+                </li>
+                <li>IVA: <span>{{iva}}</span></li>
+                <li>Total: <span>{{totalCompra}}</span></li>
+            </ul> -->
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
+<app-footer></app-footer>

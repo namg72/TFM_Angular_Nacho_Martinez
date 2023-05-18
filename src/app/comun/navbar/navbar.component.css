@@ -1,0 +1,188 @@
+        header {
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+        }
+        
+        .logo {
+            margin-left: 1rem;
+        }
+        
+        .nombre {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .cesta {
+            margin-top: 4rem;
+        }
+        
+        .cesta p {
+            display: inline-block;
+        }
+        
+        .cesta span {
+            color: red;
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+        }
+        
+        h2 {
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 5rem;
+            color: #333;
+            position: relative;
+            top: 1rem;
+        }
+        
+        .navbar {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        
+        nav li {
+            display: inline;
+            padding: 1rem;
+            position: relative;
+            color: antiquewhite;
+        }
+        
+        .list {
+            display: inline-block;
+        }
+        
+        a {
+            text-decoration: none;
+            color: antiquewhite;
+            padding: 1%;
+        }
+        
+        li a:hover {
+            font-weight: bold;
+            color: #333;
+            background-color: antiquewhite;
+            font-size: large;
+        }
+        
+        .loginIcon {
+            padding-right: 5%;
+        }
+        
+        .login input {
+            margin-right: 4rem;
+        }
+        
+        .sesion {
+            margin-left: 1rem;
+            color: antiquewhite;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        .sesion:hover {
+            font-weight: bold;
+            color: #333;
+            background-color: antiquewhite;
+            font-size: large;
+            padding: 5px;
+        }
+        
+        .loginIcon {
+            margin-right: 1rem;
+        }
+        
+        .loginIcon i {
+            color: antiquewhite;
+            display: inline-block;
+            position: relative;
+            top: 5px;
+        }
+        
+        .iconUser {
+            cursor: pointer;
+        }
+        
+        @media only screen and (max-width: 820px) {
+            header {
+                grid-template-columns: 1fr;
+                margin-bottom: 2rem;
+            }
+            .logo {
+                margin-left: 0;
+                text-align: center;
+            }
+            .nombre {
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0;
+                text-align: center;
+            }
+            .nombre h2 {
+                font-size: 5rem;
+            }
+            .cesta {
+                text-align: right;
+                margin-right: 2rem;
+            }
+            .cesta p {
+                display: none;
+            }
+            .loginIcon {
+                position: absolute;
+                top: -380px;
+                right: 0.5rem;
+            }
+            .loginIcon i {
+                color: #333;
+            }
+            .loginIcon p {
+                color: #333;
+            }
+            .cesta {
+                position: relative;
+                top: -18.7rem;
+                right: -1rem;
+            }
+        }
+        
+        @media only screen and (max-width: 390px) {
+            header {
+                min-width: 390px;
+                grid-template-columns: 1fr;
+                margin-bottom: 4rem;
+            }
+            .logo {
+                margin-left: 0;
+                text-align: center;
+            }
+            .nombre {
+                margin-top: 0;
+                text-align: center;
+            }
+            .nombre h2 {
+                font-size: 2.5rem;
+            }
+            .navbar {
+                max-width: 390px;
+            }
+            .navbar div {
+                max-width: 390px;
+            }
+            .navbar ul {
+                max-width: 390px;
+            }
+            .loginIcon {
+                align-items: end;
+            }
+            .loginIcon {
+                position: absolute;
+                top: -40px;
+                right: 1.5rem;
+            }
+            .cesta {
+                position: relative;
+                top: 4rem;
+            }
+        }

@@ -1,0 +1,238 @@
+.menu {
+    background-color: rgb(144, 140, 140);
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+}
+
+.acordeon {
+    background-color: rgb(144, 140, 140);
+    height: 80vh;
+}
+
+.accordion-body p {
+    text-align: justify;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.row {
+    margin-top: 1rem;
+    min-height: 80vw;
+    overflow: auto;
+}
+
+li {
+    text-align: justify;
+    list-style: none;
+    cursor: pointer
+}
+
+li:hover {
+    color: rgb(144, 140, 140);
+}
+
+h1 {
+    margin-top: 3rem;
+    margin-left: 3rem;
+}
+
+.productos {
+    margin: 2rem;
+}
+
+.productos>hr {
+    height: 1px;
+    margin-bottom: 4rem;
+}
+
+.menu {
+    background-color: rgb(144, 140, 140);
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    overflow: auto;
+}
+
+.buscar {
+    width: 350px;
+    cursor: pointer;
+    margin-bottom: 4rem;
+    position: relative;
+    left: 70%;
+}
+
+.buscar div {
+    display: inline-block;
+}
+
+.buscar i {
+    margin-right: 1rem;
+}
+
+.listaProductos {
+    list-style: none;
+}
+
+.listaProductos li {
+    margin-left: 0%;
+}
+
+.listaProductos select {
+    width: 85%;
+    height: 2rem;
+    margin-bottom: 15px;
+}
+
+.listaProductos label {
+    display: block;
+    text-align: left;
+    padding-bottom: 5px;
+    left: 0px;
+    color: white;
+}
+
+
+/* .listado {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1 rem;
+    margin-left: 4rem;
+    flex-grow: 15;
+} */
+
+.grid {
+    grid-row-gap: 1 rem;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+}
+
+img {
+    display: inline-block;
+}
+
+.list-description {
+    display: inline-block;
+    position: absolute;
+    margin-left: 5rem;
+    top: 1rem;
+}
+
+.error {
+    background-color: rgb(232, 174, 174);
+    border-radius: 10px;
+    color: red;
+    text-align: center;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.tarjetas {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 2rem;
+    justify-items: center;
+}
+
+.tarjetas>div {
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    box-shadow: 2px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    transition: all 0.3s ease;
+}
+
+.tarjetas img {
+    border-radius: 10px 10px 0 0;
+}
+
+.tarjetas p {
+    text-align: left;
+    color: #626567;
+    font-family: Poppins-Bold;
+    padding: 1em;
+}
+
+.tarjetas a {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.tarjetas p,
+h3 span {
+    margin-left: 1rem;
+}
+
+.tarjetas>div:hover {
+    margin-top: -5px;
+    margin-left: 1px;
+    box-shadow: 7px 7px 9px -1px rgba(0, 0, 0, 0.65);
+}
+
+.tarjetas header {
+    margin: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tarjetas h2 {
+    padding: 2%;
+    text-align: center;
+}
+
+.orderList {
+    margin-top: 1rem;
+}
+
+.orderList select {
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 820px) {
+    .accordion-body {
+        font-size: 10px;
+    }
+    .accordion-body p {
+        font-size: 12px;
+    }
+    .buscar {
+        left: 45%;
+    }
+    .tarjetas {
+        grid-template-columns: 1fr 1fr;
+    }
+    .tarjetas div {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .accordion-body {
+        font-size: small;
+    }
+    .productos {
+        width: 390px;
+        margin: 0%;
+        margin-top: 2rem;
+        padding: 2rem;
+    }
+    .buscar {
+        left: 10%;
+    }
+    .tarjetas {
+        padding: 0%;
+        width: 390px;
+        grid-template-columns: 1fr;
+    }
+    .tarjetas div {
+        width: 70%;
+    }
+}

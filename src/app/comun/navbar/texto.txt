@@ -1,0 +1,30 @@
+<div class="container">
+    <header>
+        <div class="logo">
+            <img src="../../../assets/icons/logo.png" alt="Logo">
+        </div>
+
+        <div class="nombre">
+            <h2>DG Suministros</h2>
+        </div>
+
+    </header>
+
+    <nav class="navbar navbar-expand bg-dark-50 ">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav text-white">
+                    <a class="nav-link active text-white-50" aria-current="page" href="/home">Home</a>
+                    <a class="nav-link text-white-50" href="/historia">Historia</a>
+                    <a class="nav-link text-white-50" href="/consejos">Consejos</a>
+                    <a class="nav-link text-white-50" href="/contacto">Contacto</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>

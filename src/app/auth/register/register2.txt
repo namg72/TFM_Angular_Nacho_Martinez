@@ -1,0 +1,49 @@
+<div class="container">
+
+    <form [formGroup]="miFormulario" (ngSubmit)="send()" autocomplete="off">
+        <!-- nombre input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example1">Nombre de Usuario</label>
+            <input formControlName="userName" type="text" id="form2Example1" class="form-control" />
+            <span class="error" *ngIf="miFormulario.controls['userName'].touched && miFormulario.controls['userName'].invalid"> El nombre de usuario debe tener más de 5 caracteres</span>
+
+
+        </div>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example1">Email</label>
+            <input formControlName="email" type="text" id="form2Example1" class="form-control" />
+            <span class="error" *ngIf="miFormulario.controls['email'].touched && miFormulario.controls['email'].invalid"> El campo debe tener un formato email</span>
+
+
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example2">Password</label>
+            <input formControlName="password" type="password" id="form2Example2" class="form-control" />
+            <span class="error" *ngIf="miFormulario.controls['password'].markAllAsTouched && miFormulario.controls['password'].invalid">Las contraseñas debe tener más de 5 caracteres</span>
+
+
+        </div>
+
+        <!--Repeat Password input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example2">Repeat Password</label>
+            <input formControlName="repeatPassword" type="password" class="form-control" />
+            <span class="error" *ngIf="miFormulario.controls['repeatPassword'].touched && miFormulario.controls['repeatPassword'].invalid">Las contraseñas deben ser iguales</span>
+        </div>
+
+
+
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="miFormulario.invalid">Register</button>
+        <a routerLink="/">HOME</a>
+
+
+    </form>
+
+
+
+</div>
