@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit{
   ngOnInit(): void {
     this.miFormulario.get('email')?.reset() }
  
-//metodo para navaegar por codigo iyectando el servicio Router de Angular
+//metodo para navegar por codigo inyectando el servicio Router de Angular
 navigateToHome(){
   this.router.navigate([''])
  }
@@ -64,6 +64,7 @@ navigateToHome(){
           
           console.log(response);
           if(response.status===200){
+            
             //guardamos el token y el rol en el localstorage
             localStorage.setItem('token', response.body.token);
             localStorage.setItem('userName', response.body.userName);

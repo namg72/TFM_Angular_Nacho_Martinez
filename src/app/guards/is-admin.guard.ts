@@ -26,15 +26,20 @@ export class IsAdminGuard implements CanActivate {
 
 
             if (!valid){
-
               Swal.fire({
                 title: 'Error!',
                 text: 'Debes ser administrdor para entrar aqui ',
                 icon: 'error',
                 confirmButtonText: 'Cerrar'
               })
+              this.router.navigateByUrl('/auth/login');
             }
-          })
+          }
+         
+          
+          )
+          
+          
         )
 
   }
